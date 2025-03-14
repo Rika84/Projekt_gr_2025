@@ -2,7 +2,7 @@
 
 body {
     font-family: 'Tsukimi Rounded', sans-serif;
-    background-color: rgb(2, 56, 89);
+    background-image: url(img/back.png);
     margin: 0;
     padding: 0;
     color: black;
