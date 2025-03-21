@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Koszyk</title>
+    <link rel="stylesheet" href="style_koszyk.css">
+</head>
+<body>
+
+    <header>
+        <h1>Twój koszyk</h1>
+        <a href="home.html">← Powrót do sklepu</a>
+    </header>
+
+    <main>
+        <section id="cart-items">
+            <p>Koszyk jest pusty.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Temu. Wszelkie prawa zastrzeżone.</p>
+    </footer>
+
+    <script>
+        function loadCart() {
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
+            let cartSection = document.getElementById("cart-items");
+
+            if (cart.length === 0) {
+                cartSection.innerHTML = "<p>Koszyk jest pusty.</p>";
+                return;
+            }
+
+            cartSection.innerHTML = "";
+            cart.forEach((item, index) => {
+                let itemElement = document.createElement("div");
+                itemElement.innerHTML = `
+                    <img src="${item.image}" alt="${item.name}" width="100">
+                    <p>${item.name} - ${item.price}</p>
+                    <button onclick="removeFromCart(${index})">Usuń</button>
+                `;
+                cartSection.appendChild(itemElement);
+            });
+        }
+
+        function removeFromCart(index) {
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
+            cart.splice(index, 1);
+            localStorage.setItem("cart", JSON.stringify(cart));
+            loadCart();
+        }
+
+        loadCart();
+    </script>
+
+</body>
+</html>
