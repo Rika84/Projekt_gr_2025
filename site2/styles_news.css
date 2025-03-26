@@ -113,7 +113,18 @@ main {
     justify-content: center;
     align-items: center;
 }
+
+.news-image {
+    position: absolute;
+    left: -50px;
+    top: -50px;
+    width: 200px;
+    transform: rotate(-10deg);
+    z-index: 5;
+}
+
 .about_text {
+    position: relative;
     width: 80%;
     max-width: 1000px;
     padding: 20px;
