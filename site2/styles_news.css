@@ -3,7 +3,7 @@
 body {
     font-family: 'Tsukimi Rounded', sans-serif;
     background-image: url(https://raw.githubusercontent.com/Rika84/Projekt_gr_2025/main/site2/img/background_footer.png);
-    background-size: 100%;
+    background-size: 100% 100%;
     margin: 0;
     padding: 0;
     color: black;
@@ -25,10 +25,6 @@ body {
     box-sizing: border-box;
     position: fixed;
     top: 0; 
-}
-
-header img {
-    height: 50px;
 }
 
 .search-box {
@@ -70,9 +66,9 @@ header button {
     cursor: pointer;
 }
 
-header a {
-    width: 40px;
-    height: 40px;
+.koszykicon {
+    width: 50px;
+    height: 50px;
     background-color: white;
     border-radius: 50%;
     display: flex;
@@ -82,23 +78,33 @@ header a {
     border: 2px solid rgb(143, 145, 149);
 }
 
-header a img {
-    width: 25px;
-    height: 25px;
-    background-color: white;
+.koszykicon img {
     border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    background-color: white;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 5px;
 }
+.homeicon img {
+    width: 45px;
+    height: 45px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+}
+
 main {
     margin-top: 100px;
 }
 
 .title_img img {
-    width: 300px;
-    margin: 170px auto 70px;
+    width: 400px;
+    margin: 50px auto;
 }
 
 .title_img {
@@ -108,8 +114,30 @@ main {
     align-items: center;
 }
 
+.news-image {
+    position: absolute;
+    left: -50px;
+    top: -50px;
+    width: 200px;
+    transform: rotate(-10deg);
+    z-index: 5;
+}
+
+.about_text {
+    position: relative;
+    width: 80%;
+    max-width: 1000px;
+    padding: 20px;
+    background-image: url(https://raw.githubusercontent.com/Rika84/Projekt_gr_2025/main/site2/img/background_box.png);
+    background-size: cover;
+    background-position: center;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: 20px auto;
+}
 .menubar{
-    margin: 10px 50px;
+    margin: 30px 50px;
     display: flex;
     justify-content: space-around;
     border-radius: 20px;
