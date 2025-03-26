@@ -29,10 +29,6 @@ body {
     margin-bottom: 40px;
 }
 
-header img {
-    height: 50px;
-}
-
 .search-box {
     position: relative;
     display: flex;
@@ -72,9 +68,9 @@ header button {
     cursor: pointer;
 }
 
-header a {
-    width: 40px;
-    height: 40px;
+.koszykicon {
+    width: 50px;
+    height: 50px;
     background-color: white;
     border-radius: 50%;
     display: flex;
@@ -84,11 +80,20 @@ header a {
     border: 2px solid rgb(143, 145, 149);
 }
 
-header a img {
-    width: 25px;
-    height: 25px;
-    background-color: white;
+.koszykicon img {
     border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+}
+.homeicon img {
+    width: 45px;
+    height: 45px;
+    background-color: white;
     display: flex;
     align-items: center;
     justify-content: center;
