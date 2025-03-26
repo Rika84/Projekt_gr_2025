@@ -5,22 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Koszyk</title>
     <link rel="stylesheet" href="styles_koszyk.css">
+    <link rel="icon" type="image/x-icon" href="https://raw.githubusercontent.com/Rika84/Projekt_gr_2025/main/site2/img/favicon.png">
 </head>
 <body>
 
     <header>
-        <h1>Twój koszyk</h1>
-        <a href="home.html">← Powrót do sklepu</a>
+        <h1>Your cart</h1>
+        <a href="home.html">← Back to the main page</a>
     </header>
 
     <main>
-        <section id="cart-items">
-            <p>Koszyk jest pusty.</p>
+        <section class="cart-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Product</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                        <th>Sum</th>
+                    </tr>
+                </thead>
+                <tbody id="cart-items">
+                    <tr>
+                        <td colspan="5">Koszyk jest pusty.</td>
+                    </tr>
+                </tbody>
+            </table>
         </section>
     </main>
 
     <footer>
-        <p>© 2025 Temu. Wszelkie prawa zastrzeżone.</p>
+        <p>© 2025 Bubbles & Scales</p>
     </footer>
 
     <script>
