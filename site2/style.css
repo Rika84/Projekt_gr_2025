@@ -181,15 +181,22 @@ footer {
     bottom: 0; 
     margin: 0;
 }
+.footernav {
+  margin: 30px auto 20px;
+  display: flex;
+  justify-content: space-around;
+}
 
-.menubar{
-    margin: 10px 50px;
-    display: flex;
-    justify-content: space-around;
-    border-radius: 20px;
-    padding: 15px;
+.menubar {
+  margin: 10px 50px;
+  display: flex;
+  justify-content: space-around;
+  border-radius: 20px;
+  padding: 15px;
 }
+
 .menubar a {
-    color: aliceblue;
-    text-decoration: none;
+  color: aliceblue;
+  text-decoration: none;
 }
+
