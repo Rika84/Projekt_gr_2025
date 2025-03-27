@@ -5,31 +5,69 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>News - Bubbles & Scales</title>
     <link rel="stylesheet" href="styles_news.css">
+    <link rel="icon" type="image/x-icon" href="https://raw.githubusercontent.com/Rika84/Projekt_gr_2025/main/site2/img/favicon.png">
+
 </head>
 <body>
     <header>
-        <h1>Latest News</h1>
-        <nav class="menubar">
-            <a href="home.html">Home</a>
-            <a href="news.html">News</a>
-            <a href="about.html">About Us</a>
-            <a href="contact.html">Contact Us</a>
-        </nav>
+        <div class="header">
+            <a class="homeicon" href="home.html">
+                <img src="https://raw.githubusercontent.com/Rika84/Projekt_gr_2025/main/site2/img/logo.png" alt="Logo">
+            </a>
+            <div class="search-box">
+                <input type="text" placeholder="Search...">
+                <button type="submit">
+                    <img src="https://raw.githubusercontent.com/Rika84/Projekt_gr_2025/main/site2/img/loupe.png" alt="Szukaj" width="20">
+                </button>
+            </div>
+            <a class="koszykicon" href="koszyk.html">
+                <img src="https://raw.githubusercontent.com/Rika84/Projekt_gr_2025/main/site2/img/shopping-basket.png" alt="Koszyk" width="20">
+                <span id="cart-count">0</span>
+            </a>
+        </div>
     </header>
 
     <main>
-        <article>
-            <h2>Nowość 1</h2>
-            <p>Lorem ipsum...</p>
-        </article>
-        <article>
-            <h2>Nowość 2</h2>
-            <p>Lorem ipsum...</p>
-        </article>
+        <div class="title_img">
+            <img src="https://raw.githubusercontent.com/Rika84/Projekt_gr_2025/main/site2/img/news_title.png" alt="">
+        </div>
+        <div class="about_text">
+            <article>
+                <p>Soon on this page you will find all the news about our online store, current promotions, seasonal discounts, as well as new products in the range. We are constantly updating the information so that you can be the first to know about the best offers and interesting new products. To stay up to date with all the latest events, subscribe to our social networks, where we share exclusive promotions, useful tips and profitable offers. Follow us so as not to miss anything important!</p>
+            </article>
+            <div>
+                <p>
+                  At <strong>Bubbles & Scales</strong>, we bring the magic of the ocean right to your home! Whether you're a seasoned aquarist or just starting your journey into the world of exotic fish, we offer a stunning selection of <strong>tropical, saltwater, and freshwater fish</strong> as well as vibrant corals, aquatic plants, and premium tank accessories.
+                </p>
+                <p>
+                  Our goal is to provide not just fish but an <em>entire underwater experience</em>—helping you create a beautiful, thriving ecosystem in your aquarium. We take pride in offering expert advice, high-quality care products, and responsible fishkeeping practices to ensure happy, healthy aquariums.
+                </p>
+                <p>
+                  So whether you're looking for a new aquatic companion or want to explore the wonders of the deep, <strong>Bubbles & Scales</strong> is the perfect place to dive in!
+                </p>
+              </div>
+        </div>
     </main>
 
     <footer>
-        <p>© 2025 Bubbles & Scales</p>
+        <nav class="menubar">
+          <a href="home.html">Home</a>
+          <a href="news.html">News</a>
+          <a href="about.html">About Us</a>
+          <a href="contact.html">Contact Us</a>
+        </nav>
+          <p class="c">© 2025 Bubbles & Scales</p>
     </footer>
+
+    <script>
+        function updateCartCount() {
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
+            let totalQuantity = cart.reduce((sum, item) => sum + (item.quantity || 1), 0);
+            document.getElementById("cart-count").textContent = totalQuantity;
+        }
+
+        document.addEventListener("DOMContentLoaded", updateCartCount);
+    </script>
+
 </body>
 </html>

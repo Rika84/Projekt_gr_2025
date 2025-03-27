@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Koi - Bubbles & Scales</title>
+    <link rel="stylesheet" href="styles_product.css">
+    <link rel="icon" type="image/x-icon" href="https://raw.githubusercontent.com/Rika84/Projekt_gr_2025/main/site2/img/favicon.png">
+</head>
+<body>
+
+    <header>
+        <div class="header">
+            <a class="homeicon" href="home.html">
+                <img src="https://raw.githubusercontent.com/Rika84/Projekt_gr_2025/main/site2/img/logo.png" alt="Logo">
+            </a>
+            <div class="search-box">
+                <input type="text" placeholder="Search...">
+                <button type="submit">
+                    <img src="https://raw.githubusercontent.com/Rika84/Projekt_gr_2025/main/site2/img/loupe.png" alt="Search..." width="20">
+                </button>
+            </div>
+            <a class="koszykicon" href="koszyk.html">
+                <img src="https://raw.githubusercontent.com/Rika84/Projekt_gr_2025/main/site2/img/shopping-basket.png" alt="Koszyk" width="20">
+                <span id="cart-count">0</span>
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <section class="product-page">
+            <div class="product-container">
+                <div class="top-details">
+                    <img class="product-image" src="https://raw.githubusercontent.com/Rika84/Projekt_gr_2025/main/site2/img/produkt2.jpg" alt="Fish Name">
+                    <div class="product-details">
+                        <h1>Koi</h1>
+                        <p class="price">Price: <span>89,99 zł</span></p>
+                        <p class="rating">User rating: ★★★☆☆</p>
+                        <button class="addbutton" onclick="addToCart('Koi', 'https://raw.githubusercontent.com/Rika84/Projekt_gr_2025/main/site2/img/produkt2.jpg', '89,99 zł', this)">
+                            Add to cart <img src="https://raw.githubusercontent.com/Rika84/Projekt_gr_2025/main/site2/img/shopping-basket.png" alt="Koszyk" width="20">
+                        </button>
+                    </div>
+                </div>
+                <div class="description-container">
+                    <p class="description">Description: </p>
+                    <em>Koi are large, colorful carp that are often found in outdoor ponds. Known for their beautiful patterns and long lifespan, they are a symbol of good fortune and perseverance in Japanese culture.</em>
+                </div>
+            </div>            
+        </section>
+    </main>
+
+    <footer>
+        <div class="social">
+            <p>Follow Us</p>
+            <a href="#"><img src="https://raw.githubusercontent.com/Rika84/Projekt_gr_2025/main/site2/img/snapchat.png" alt="Snapchat"></a>
+            <a href="#"><img src="https://raw.githubusercontent.com/Rika84/Projekt_gr_2025/main/site2/img/google.png" alt="Google+"></a>
+            <a href="#"><img src="https://raw.githubusercontent.com/Rika84/Projekt_gr_2025/main/site2/img/yt.png" alt="YouTube"></a>
+            <a href="#"><img src="https://raw.githubusercontent.com/Rika84/Projekt_gr_2025/main/site2/img/facebook.png" alt="Facebook"></a>
+            <a href="#"><img src="https://raw.githubusercontent.com/Rika84/Projekt_gr_2025/main/site2/img/twitr.png" alt="Twitter"></a>
+        </div>
+        <nav class="menubar">
+            <a href="home.html">Home</a>
+            <a href="news.html">News</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact Us</a>
+        </nav>
+        <p class="c">© 2025 Bubbles & Scales</p>
+    </footer>
+
+    <script>
+        function addToCart(name, image, price, button) {
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
+            cart.push({ name, image, price });
+            localStorage.setItem("cart", JSON.stringify(cart));
+
+            document.getElementById("cart-count").innerText = cart.length;
+
+            button.innerHTML = 'Added to cart!';
+            button.disabled = true; 
+            button.style.backgroundColor = 'gray';
+        }
+
+        function updateCartCount() {
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
+            document.getElementById("cart-count").innerText = cart.length;
+        }
+
+        updateCartCount();
+    </script>
+
+</body>
+</html>

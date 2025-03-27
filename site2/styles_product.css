@@ -100,6 +100,92 @@ header button {
     padding: 5px;
 }
 
+.product-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    background: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.4));
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    gap: 20px;
+}
+
+.product-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding-top: 100px;
+}
+
+.product-container > .top-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+}
+
+.product-image {
+    width: 400px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.product-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 10px;
+    flex-grow: 1;
+}
+
+.top-details h1 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.price, .rating {
+    font-size: 16px;
+}
+
+.description-container {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 100%;
+}
+
+.description {
+    font-size: 14px;
+    color: #555;
+}
+
+.addbutton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(49, 25, 86, 255);
+    color: white;
+    font-size: 16px;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.addbutton img {
+    margin-left: 10px;
+}
+
+.addbutton:hover {
+    background-color: rgba(72, 37, 122, 255);
+}
+
 nav {
     display: flex;
     justify-content: space-around;
@@ -114,54 +200,13 @@ nav a {
     text-decoration: none;
     font-size: 18px;
 }
-main {
-    border-radius: 25px;
-    max-width: 1000px;
-    margin: 20px auto;
-    padding: 20px;
+
+footer {
     text-align: center;
-    /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); */
+    color: white;
+    font-size: 14px;
 }
 
-.name img {
-    width: 650px;
-    max-width: 1000px;
-}
-.logo {
-    width: 115px;
-    margin-top: 90px;
-    margin-bottom: 20px;
-}
-.product {
-    display: inline-block;
-    background-color: white;
-    border-radius: 20px;
-    padding: 15px;
-    margin: 10px;
-    width: 250px;
-    height: 230px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
-
-.product_img {
-    width: 180px;
-    height: 130px;
-    border-radius: 10px;
-    object-fit: cover;
-}
-
-.product_img:hover {
-    transform: scaleX(-1);
-}
-
-.addbutton {
-    font-family: 'Tsukimi Rounded', sans-serif;
-    background-color: aliceblue;
-    padding: 12px;
-    border-radius: 15px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
 .social p {
     font-size: 16px;
     margin: 10px;
@@ -170,33 +215,22 @@ main {
     max-width: 30px;
     margin: 20px;
 }
-footer {
-    text-align: center;
-    color: white;
-    font-size: 14px;
-}
+
 .c {
     background-color: rgba(49,25,86,255);
     text-align: left;
     bottom: 0; 
     margin: 0;
 }
-.footernav {
-  margin: 30px auto 20px;
-  display: flex;
-  justify-content: space-around;
-}
 
-.menubar {
-  margin: 10px 50px;
-  display: flex;
-  justify-content: space-around;
-  border-radius: 20px;
-  padding: 15px;
+.menubar{
+    margin: 10px 50px;
+    display: flex;
+    justify-content: space-around;
+    border-radius: 20px;
+    padding: 15px;
 }
-
 .menubar a {
-  color: aliceblue;
-  text-decoration: none;
+    color: aliceblue;
+    text-decoration: none;
 }
-
