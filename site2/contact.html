@@ -54,5 +54,16 @@
           </nav>
         <p class="c">© 2025 Bubbles & Scales</p>
     </footer>
+
+    <script>
+        function updateCartCount() {
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
+            let totalQuantity = cart.reduce((sum, item) => sum + (item.quantity || 1), 0);
+            document.getElementById("cart-count").textContent = totalQuantity;
+        }
+
+        document.addEventListener("DOMContentLoaded", updateCartCount);
+    </script>
+
 </body>
 </html>
