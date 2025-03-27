@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kirys - Bubbles & Scales</title>
-    <link rel="stylesheet" href="styles_product.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/x-icon" href="https://raw.githubusercontent.com/Rika84/Projekt_gr_2025/main/site2/img/favicon.png">
 </head>
 <body>
 
     <header>
         <div class="header">
-            <a class="homeicon" href="home.html">
+            <a href="home.html">
                 <img src="https://raw.githubusercontent.com/Rika84/Projekt_gr_2025/main/site2/img/logo.png" alt="Logo">
             </a>
             <div class="search-box">
@@ -20,7 +20,7 @@
                     <img src="https://raw.githubusercontent.com/Rika84/Projekt_gr_2025/main/site2/img/loupe.png" alt="Search..." width="20">
                 </button>
             </div>
-            <a class="koszykicon" href="koszyk.html">
+            <a class="koszyk" href="koszyk.html">
                 <img src="https://raw.githubusercontent.com/Rika84/Projekt_gr_2025/main/site2/img/shopping-basket.png" alt="Koszyk" width="20">
                 <span id="cart-count">0</span>
             </a>
@@ -30,22 +30,24 @@
     <main>
         <section class="product-page">
             <div class="product-container">
-                <div class="top-details">
-                    <img class="product-image" src="https://raw.githubusercontent.com/Rika84/Projekt_gr_2025/main/site2/img/produkt3.jpg" alt="Fish Name">
-                    <div class="product-details">
+                <img class="product-image" src="https://raw.githubusercontent.com/Rika84/Projekt_gr_2025/main/site2/img/produkt3.jpg" alt="Fish Name">
+                
+                <div class="product-details">
+                    <div>
                         <h1>Kirys</h1>
                         <p class="price">Price: <span>29,99 zł</span></p>
                         <p class="rating">User rating: ★★★★☆</p>
-                        <button class="addbutton" onclick="addToCart('Kirys', 'https://raw.githubusercontent.com/Rika84/Projekt_gr_2025/main/site2/img/produkt3.jpg', '29,99 zł', this)">
-                            Add to cart <img src="https://raw.githubusercontent.com/Rika84/Projekt_gr_2025/main/site2/img/shopping-basket.png" alt="Koszyk" width="20">
-                        </button>
                     </div>
+                    <div>
+                        <p class="description">Description: </p>
+                        <em>Kirys, or Corydoras, are small, bottom-dwelling catfish with a peaceful temperament. They are well-loved for their playful nature and their ability to help keep tanks clean by scavenging leftover food.</em>
+                    </div>
+
+                    <button class="addbutton" onclick="addToCart('Kirys', 'https://raw.githubusercontent.com/Rika84/Projekt_gr_2025/main/site2/img/produkt3.jpg', '29,99 zł', this)">
+                        Add to cart <img src="https://raw.githubusercontent.com/Rika84/Projekt_gr_2025/main/site2/img/shopping-basket.png" alt="Koszyk" width="20">
+                    </button>
                 </div>
-                <div class="description-container">
-                    <p class="description">Description: </p>
-                    <em>Kirys, or Corydoras, are small, bottom-dwelling catfish with a peaceful temperament. They are well-loved for their playful nature and their ability to help keep tanks clean by scavenging leftover food.</em>
-                </div>
-            </div>            
+            </div>
         </section>
     </main>
 
@@ -58,7 +60,7 @@
             <a href="#"><img src="https://raw.githubusercontent.com/Rika84/Projekt_gr_2025/main/site2/img/facebook.png" alt="Facebook"></a>
             <a href="#"><img src="https://raw.githubusercontent.com/Rika84/Projekt_gr_2025/main/site2/img/twitr.png" alt="Twitter"></a>
         </div>
-        <nav class="menubar">
+        <nav class="footernav">
             <a href="home.html">Home</a>
             <a href="news.html">News</a>
             <a href="about.html">About Us</a>

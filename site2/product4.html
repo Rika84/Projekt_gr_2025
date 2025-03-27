@@ -4,14 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hipacitrus - Bubbles & Scales</title>
-    <link rel="stylesheet" href="styles_product.css">
+    <link rel="stylesheet" href="style.css">
+
     <link rel="icon" type="image/x-icon" href="https://raw.githubusercontent.com/Rika84/Projekt_gr_2025/main/site2/img/favicon.png">
 </head>
 <body>
 
     <header>
         <div class="header">
-            <a class="homeicon" href="home.html">
+            <a href="home.html">
+
                 <img src="https://raw.githubusercontent.com/Rika84/Projekt_gr_2025/main/site2/img/logo.png" alt="Logo">
             </a>
             <div class="search-box">
@@ -20,7 +22,9 @@
                     <img src="https://raw.githubusercontent.com/Rika84/Projekt_gr_2025/main/site2/img/loupe.png" alt="Search..." width="20">
                 </button>
             </div>
-            <a class="koszykicon" href="koszyk.html">
+
+            <a class="koszyk" href="koszyk.html">
+
                 <img src="https://raw.githubusercontent.com/Rika84/Projekt_gr_2025/main/site2/img/shopping-basket.png" alt="Koszyk" width="20">
                 <span id="cart-count">0</span>
             </a>
@@ -30,22 +34,28 @@
     <main>
         <section class="product-page">
             <div class="product-container">
-                <div class="top-details">
-                    <img class="product-image" src="https://raw.githubusercontent.com/Rika84/Projekt_gr_2025/main/site2/img/produkt4.jpg" alt="Fish Name">
-                    <div class="product-details">
+
+                <img class="product-image" src="https://raw.githubusercontent.com/Rika84/Projekt_gr_2025/main/site2/img/produkt4.jpg" alt="Fish Name">
+                
+                <div class="product-details">
+                    <div>
                         <h1>Hipacitrus</h1>
-                        <p class="price">Price: <span>59,99 zł</span></p>
-                        <p class="rating">User rating: ★★☆☆☆</p>
-                        <button class="addbutton" onclick="addToCart('Hipacitrus', 'https://raw.githubusercontent.com/Rika84/Projekt_gr_2025/main/site2/img/produkt4.jpg', '59,99 zł', this)">
-                            Add to cart <img src="https://raw.githubusercontent.com/Rika84/Projekt_gr_2025/main/site2/img/shopping-basket.png" alt="Koszyk" width="20">
-                        </button>
+                    <p class="price">Price: <span>59,99 zł</span></p>
+                    <p class="rating">User rating: ★★☆☆☆</p>
                     </div>
+                    <div>
+                        <p class="description">Description: </p>
+                        <em>Hipacitrus is a type of tropical fish recognized for its vibrant colors, particularly its bright yellow and orange hues. It’s an active fish that thrives in warm, well-maintained aquariums.</em>
+                    </p>
+                    </div>
+                    
+
+                    <button class="addbutton" onclick="addToCart('Hipacitrus', 'https://raw.githubusercontent.com/Rika84/Projekt_gr_2025/main/site2/img/produkt4.jpg', '59,99 zł', this)">
+                        Add to cart <img src="https://raw.githubusercontent.com/Rika84/Projekt_gr_2025/main/site2/img/shopping-basket.png" alt="Koszyk" width="20">
+                    </button>
                 </div>
-                <div class="description-container">
-                    <p class="description">Description: </p>
-                    <em>Hipacitrus is a type of tropical fish recognized for its vibrant colors, particularly its bright yellow and orange hues. It’s an active fish that thrives in warm, well-maintained aquariums.</em>
-                </div>
-            </div>            
+            </div>
+
         </section>
     </main>
 
@@ -58,7 +68,8 @@
             <a href="#"><img src="https://raw.githubusercontent.com/Rika84/Projekt_gr_2025/main/site2/img/facebook.png" alt="Facebook"></a>
             <a href="#"><img src="https://raw.githubusercontent.com/Rika84/Projekt_gr_2025/main/site2/img/twitr.png" alt="Twitter"></a>
         </div>
-        <nav class="menubar">
+        <nav class="footernav">
+
             <a href="home.html">Home</a>
             <a href="news.html">News</a>
             <a href="about.html">About Us</a>

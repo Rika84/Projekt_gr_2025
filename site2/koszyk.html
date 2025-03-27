@@ -15,9 +15,6 @@
     </header>
 
     <main>
-        <div class="title_img">
-            <img src="https://raw.githubusercontent.com/Rika84/Projekt_gr_2025/main/site2/logo_white_main.png" alt="">
-          </div>
         <section class="cart-container">
             <table>
                 <thead>
@@ -38,13 +35,7 @@
     </main>
 
     <footer>
-        <nav class="menubar">
-          <a href="home.html">Home</a>
-          <a href="news.html">News</a>
-          <a href="about.html">About Us</a>
-          <a href="contact.html">Contact Us</a>
-        </nav>
-          <p class="c">© 2025 Bubbles & Scales</p>
+        <p>© 2025 Bubbles & Scales</p>
     </footer>
 
     <script>
@@ -76,7 +67,7 @@
                         <input type="number" value="${quantity}" min="1" onchange="updateQuantity(${index}, this.value)">
                     </td>
                     <td>${sum} zł</td>
-                    <td><button onclick="removeFromCart(${index})">Remove from the cart</button></td>
+                    <td><button onclick="removeFromCart(${index})">Remove from cart</button></td>
                 `;
                 cartSection.appendChild(row);
             });
