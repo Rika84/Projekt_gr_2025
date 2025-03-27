@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bubbles&Scales</title>    
+    <title>Home - Bubbles & Scales</title>    
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/x-icon" href="https://raw.githubusercontent.com/Rika84/Projekt_gr_2025/main/site2/img/favicon.png">
 </head>
@@ -11,14 +11,16 @@
 
     <header>
         <div class="header">
-            <img src="https://raw.githubusercontent.com/Rika84/Projekt_gr_2025/main/site2/img/logo.png" alt="Logo">
+            <a class="homeicon" href="home.html">
+                <img src="https://raw.githubusercontent.com/Rika84/Projekt_gr_2025/main/site2/img/logo.png" alt="Logo">
+            </a>
             <div class="search-box">
-                <input type="text" placeholder="Szukaj...">
+                <input type="text" placeholder="Search...">
                 <button type="submit">
                     <img src="https://raw.githubusercontent.com/Rika84/Projekt_gr_2025/main/site2/img/loupe.png" alt="Szukaj" width="20">
                 </button>
             </div>
-            <a href="koszyk.html">
+            <a class="koszykicon" href="koszyk.html">
                 <img src="https://raw.githubusercontent.com/Rika84/Projekt_gr_2025/main/site2/img/shopping-basket.png" alt="Koszyk" width="20">
                 <span id="cart-count">0</span>
             </a>
@@ -35,60 +37,72 @@
         <section>
             <div class="product">
                 <figure>
-                    <img class="product_img" src="https://raw.githubusercontent.com/Rika84/Projekt_gr_2025/main/site2/img/produkt1.jpg" alt="Produkt 1">
-                    <figcaption>Produkt 1 - 49,99 zł</figcaption>
-                    <button class="addbutton" onclick="addToCart('USB Masażer', 'massager.jpg', '53,08 zł')">
-                        Dodaj do koszyka <img src="https://raw.githubusercontent.com/Rika84/Projekt_gr_2025/main/site2/img/shopping-basket.png" alt="Koszyk" width="20">
+                    <a href="product1.html"> 
+                        <img class="product_img" src="https://raw.githubusercontent.com/Rika84/Projekt_gr_2025/main/site2/img/produkt1.jpg" alt="Produkt 1">
+                        <figcaption>Blue Rim - 49,99 zł</figcaption>
+                    </a>
+                    <button class="addbutton" onclick="addToCart('Blue Rim', 'https://raw.githubusercontent.com/Rika84/Projekt_gr_2025/main/site2/img/produkt1.jpg', '49,99 zł', this)">
+                        Add to cart <img src="https://raw.githubusercontent.com/Rika84/Projekt_gr_2025/main/site2/img/shopping-basket.png" alt="Koszyk" width="20">
                     </button>
                 </figure>
             </div>
 
             <div class="product">
                 <figure>
-                    <img class="product_img" src="https://raw.githubusercontent.com/Rika84/Projekt_gr_2025/main/site2/img/produkt2.jpg" alt="Produkt 2">
-                    <figcaption>Produkt 2 - 89,99 zł</figcaption>
-                    <button class="addbutton" onclick="addToCart('USB Masażer', 'massager.jpg', '53,08 zł')">
-                        Dodaj do koszyka <img src="https://raw.githubusercontent.com/Rika84/Projekt_gr_2025/main/site2/img/shopping-basket.png" alt="Koszyk" width="20">
+                    <a href="product2.html"> 
+                        <img class="product_img" src="https://raw.githubusercontent.com/Rika84/Projekt_gr_2025/main/site2/img/produkt2.jpg" alt="Produkt 2">
+                        <figcaption>Koi - 89,99 zł</figcaption>
+                    </a>
+                    <button class="addbutton" onclick="addToCart('Koi', 'https://raw.githubusercontent.com/Rika84/Projekt_gr_2025/main/site2/img/produkt2.jpg', '89,99 zł', this)">
+                        Add to cart <img src="https://raw.githubusercontent.com/Rika84/Projekt_gr_2025/main/site2/img/shopping-basket.png" alt="Koszyk" width="20">
                     </button>
                 </figure>
             </div>
 
             <div class="product">
                 <figure>
-                    <img class="product_img" src="https://raw.githubusercontent.com/Rika84/Projekt_gr_2025/main/site2/img/produkt3.jpg" alt="Produkt 3">
-                    <figcaption>Produkt 3 - 29,99 zł</figcaption>
-                    <button class="addbutton" onclick="addToCart('USB Masażer', 'massager.jpg', '53,08 zł')">
-                        Dodaj do koszyka <img src="https://raw.githubusercontent.com/Rika84/Projekt_gr_2025/main/site2/img/shopping-basket.png" alt="Koszyk" width="20">
+                    <a href="product3.html">
+                        <img class="product_img" src="https://raw.githubusercontent.com/Rika84/Projekt_gr_2025/main/site2/img/produkt3.jpg" alt="Produkt 3">
+                        <figcaption>Kirys - 29,99 zł</figcaption>
+                    </a>
+                    <button class="addbutton" onclick="addToCart('Kirys', 'https://raw.githubusercontent.com/Rika84/Projekt_gr_2025/main/site2/img/produkt3.jpg', '29,99 zł', this)">
+                        Add to cart <img src="https://raw.githubusercontent.com/Rika84/Projekt_gr_2025/main/site2/img/shopping-basket.png" alt="Koszyk" width="20">
                     </button>
                 </figure>
             </div>
 
             <div class="product">
                 <figure>
-                    <img class="product_img" src="https://raw.githubusercontent.com/Rika84/Projekt_gr_2025/main/site2/img/produkt4.jpg" alt="Produkt 4">
-                    <figcaption>Produkt 4 - 59,99 zł</figcaption>
-                    <button class="addbutton" onclick="addToCart('USB Masażer', 'massager.jpg', '53,08 zł')">
-                        Dodaj do koszyka <img src="https://raw.githubusercontent.com/Rika84/Projekt_gr_2025/main/site2/img/shopping-basket.png" alt="Koszyk" width="20">
+                    <a href="product4.html">
+                        <img class="product_img" src="https://raw.githubusercontent.com/Rika84/Projekt_gr_2025/main/site2/img/produkt4.jpg" alt="Produkt 4">
+                        <figcaption>Hipacitrus - 59,99 zł</figcaption>
+                    </a>
+                    <button class="addbutton" onclick="addToCart('Hipacitrus', 'https://raw.githubusercontent.com/Rika84/Projekt_gr_2025/main/site2/img/produkt4.jpg', '59,99 zł', this)">
+                        Add to cart <img src="https://raw.githubusercontent.com/Rika84/Projekt_gr_2025/main/site2/img/shopping-basket.png" alt="Koszyk" width="20">
                     </button>
                 </figure>
             </div>
 
             <div class="product">
                 <figure>
-                    <img class="product_img" src="https://raw.githubusercontent.com/Rika84/Projekt_gr_2025/main/site2/img/produkt5.jpg" alt="Produkt 5">
-                    <figcaption>Produkt 5 - 99,99 zł</figcaption>
-                    <button class="addbutton" onclick="addToCart('USB Masażer', 'massager.jpg', '53,08 zł')">
-                        Dodaj do koszyka <img src="https://raw.githubusercontent.com/Rika84/Projekt_gr_2025/main/site2/img/shopping-basket.png" alt="Koszyk" width="20">
+                    <a href="product5.html">
+                        <img class="product_img" src="https://raw.githubusercontent.com/Rika84/Projekt_gr_2025/main/site2/img/produkt5.jpg" alt="Produkt 5">
+                        <figcaption>Coralland - 99,99 zł</figcaption>
+                    </a>
+                    <button class="addbutton" onclick="addToCart('Coralland', 'https://raw.githubusercontent.com/Rika84/Projekt_gr_2025/main/site2/img/produkt5.jpg', '99,99 zł', this)">
+                        Add to cart <img src="https://raw.githubusercontent.com/Rika84/Projekt_gr_2025/main/site2/img/shopping-basket.png" alt="Koszyk" width="20">
                     </button>
                 </figure>
             </div>
 
             <div class="product">
                 <figure>
-                    <img class="product_img" src="https://raw.githubusercontent.com/Rika84/Projekt_gr_2025/main/site2/img/produkt6.jpg" alt="Produkt 6">
-                    <figcaption>Produkt 6 - 39,99 zł</figcaption>
-                    <button class="addbutton" onclick="addToCart('USB Masażer', 'massager.jpg', '53,08 zł')">
-                        Dodaj do koszyka <img src="https://raw.githubusercontent.com/Rika84/Projekt_gr_2025/main/site2/img/shopping-basket.png" alt="Koszyk" width="20">
+                    <a href="product6.html">
+                        <img class="product_img" src="https://raw.githubusercontent.com/Rika84/Projekt_gr_2025/main/site2/img/produkt6.jpg" alt="Produkt 6">
+                        <figcaption>Oranda - 39,99 zł</figcaption>
+                    </a>
+                    <button class="addbutton" onclick="addToCart('Oranda', 'https://raw.githubusercontent.com/Rika84/Projekt_gr_2025/main/site2/img/produkt6.jpg', '39,99 zł', this)">
+                        Add to cart <img src="https://raw.githubusercontent.com/Rika84/Projekt_gr_2025/main/site2/img/shopping-basket.png" alt="Koszyk" width="20">
                     </button>
                 </figure>
             </div>
@@ -116,12 +130,16 @@
     </footer>
 
     <script>
-        function addToCart(name, image, price) {
+        function addToCart(name, image, price, button) {
             let cart = JSON.parse(localStorage.getItem("cart")) || [];
             cart.push({ name, image, price });
             localStorage.setItem("cart", JSON.stringify(cart));
 
             document.getElementById("cart-count").innerText = cart.length;
+
+            button.innerHTML = 'Added to cart!';
+            button.disabled = true; 
+            button.style.backgroundColor = 'gray';
         }
 
         function updateCartCount() {
