@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="page-title">Produkt - Bubbles & Scales</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/styles_product.css">
+    <link rel="icon" type="image/x-icon" href="https://raw.githubusercontent.com/Rika84/Projekt_gr_2025/main/site2/img/favicon.png">
+</head>
+<body>
+    <header>
+        <div class="header">
+            <a href="../html/home.html" class="homeicon">
+                <img src="https://raw.githubusercontent.com/Rika84/Projekt_gr_2025/main/site2/img/logo.png" alt="Logo">
+            </a>
+            <div class="search-box">
+                <input type="text" placeholder="Search...">
+                <button type="submit">
+                    <img src="https://raw.githubusercontent.com/Rika84/Projekt_gr_2025/main/site2/img/loupe.png" alt="Szukaj" width="20">
+                </button>
+                <div id="search-suggestions"></div>
+            </div>
+            <a class="koszykicon" href="../html/koszyk.html">
+                <img src="https://raw.githubusercontent.com/Rika84/Projekt_gr_2025/main/site2/img/shopping-basket.png" alt="Koszyk" width="20">
+                <span id="cart-count">0</span>
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <section class="product-page">
+            <div class="product-container">
+                <img class="product-image" id="product-image" src="" alt="Zdjęcie produktu">
+                <div class="product-details">
+                    <div>
+                        <h1 id="product-name"></h1>
+                        <p class="price">Cena: <span id="product-price"></span></p>
+                        <p class="rating">Ocena: ★★★★☆</p>
+                    </div>
+                    <div>
+                        <p class="description">Opis:</p>
+                        <em id="product-description"></em>
+                    </div>
+                    <button class="addbutton" id="add-to-cart-btn">
+                        Dodaj do koszyka <img src="https://raw.githubusercontent.com/Rika84/Projekt_gr_2025/main/site2/img/shopping-basket.png" alt="Koszyk" width="20">
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <nav class="footernav">
+            <a href="../html/home.html">Home</a>
+            <a href="../html/news.html">News</a>
+            <a href="../html/about.html">About Us</a>
+            <a href="../html/contact.html">Contact Us</a>
+        </nav>
+        <p class="c">© 2025 Bubbles & Scales</p>
+    </footer>
+
+    <script src="../js/search.js"></script>
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const id = parseInt(urlParams.get("id"));
+        const product = window.products.find(p => p.id === id);
+
+        if (product) {
+            document.getElementById("page-title").textContent = `${product.name} - Bubbles & Scales`;
+            document.getElementById("product-name").textContent = product.name;
+            document.getElementById("product-price").textContent = product.price;
+            document.getElementById("product-description").textContent = product.description;
+            document.getElementById("product-image").src = product.image;
+
+            document.getElementById("add-to-cart-btn").onclick = function () {
+                let cart = JSON.parse(localStorage.getItem("cart")) || [];
+                let existingItem = cart.find(item => item.name === product.name);
+                if (existingItem) {
+                    existingItem.quantity += 1;
+                } else {
+                    cart.push({ name: product.name, image: product.image, price: product.price, quantity: 1 });
+                }
+                localStorage.setItem("cart", JSON.stringify(cart));
+                updateCartCount();
+                this.innerHTML = "Dodano do koszyka!";
+                this.disabled = true;
+                this.style.backgroundColor = "gray";
+            }
+        }
+
+        function updateCartCount() {
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
+            let totalQuantity = cart.reduce((sum, item) => sum + (item.quantity || 1), 0);
+            document.getElementById("cart-count").innerText = totalQuantity;
+        }
+
+        updateCartCount();
+    </script>
+</body>
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Bubbles & Scales</title>    
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" type="image/x-icon" href="https://raw.githubusercontent.com/Rika84/Projekt_gr_2025/main/site2/img/favicon.png">
+</head>
+<body>
+
+    <header>
+        <div class="header">
+            <a class="homeicon" href="../html/home.html">
+                <img src="https://raw.githubusercontent.com/Rika84/Projekt_gr_2025/main/site2/img/logo.png" alt="Logo">
+            </a>
+            <div class="search-box">
+                <input type="text" placeholder="Search...">
+                <button type="submit">
+                    <img src="https://raw.githubusercontent.com/Rika84/Projekt_gr_2025/main/site2/img/loupe.png" alt="Szukaj" width="20">
+                </button>
+                <div id="search-suggestions"></div>
+            </div>            
+            <a class="koszykicon" href="../html/koszyk.html">
+                <img src="https://raw.githubusercontent.com/Rika84/Projekt_gr_2025/main/site2/img/shopping-basket.png" alt="Koszyk" width="20">
+                <span id="cart-count">0</span>
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <section>
+            <img class="logo" src="https://raw.githubusercontent.com/Rika84/Projekt_gr_2025/main/site2/logo_white_main.png" alt="Logo">
+            <div class="name">
+                <img src="https://raw.githubusercontent.com/Rika84/Projekt_gr_2025/main/site2/img/main_page_page_name1.png" alt="Name">
+            </div>
+        </section>
+        <section>
+            <div class="product">
+                <figure>
+                    <a href="../html/product.html?id=1">
+                        <img class="product_img" src="https://raw.githubusercontent.com/Rika84/Projekt_gr_2025/main/site2/img/produkt1.jpg" alt="Produkt 1">
+                        <figcaption>Blue Rim - 49,99 zł</figcaption>
+                    </a>
+                    <button class="addbutton" onclick="addToCart('Blue Rim', 'https://raw.githubusercontent.com/Rika84/Projekt_gr_2025/main/site2/img/produkt1.jpg', '49,99 zł', this)">
+                        Add to cart <img src="https://raw.githubusercontent.com/Rika84/Projekt_gr_2025/main/site2/img/shopping-basket.png" alt="Koszyk" width="20">
+                    </button>
+                </figure>
+            </div>
+
+            <div class="product">
+                <figure>
+                    <a href="../html/product.html?id=2">
+                        <img class="product_img" src="https://raw.githubusercontent.com/Rika84/Projekt_gr_2025/main/site2/img/produkt2.jpg" alt="Produkt 2">
+                        <figcaption>Koi - 89,99 zł</figcaption>
+                    </a>
+                    <button class="addbutton" onclick="addToCart('Koi', 'https://raw.githubusercontent.com/Rika84/Projekt_gr_2025/main/site2/img/produkt2.jpg', '89,99 zł', this)">
+                        Add to cart <img src="https://raw.githubusercontent.com/Rika84/Projekt_gr_2025/main/site2/img/shopping-basket.png" alt="Koszyk" width="20">
+                    </button>
+                </figure>
+            </div>
+
+            <div class="product">
+                <figure>
+                    <a href="../html/product.html?id=3">
+                        <img class="product_img" src="https://raw.githubusercontent.com/Rika84/Projekt_gr_2025/main/site2/img/produkt3.jpg" alt="Produkt 3">
+                        <figcaption>Kirys - 29,99 zł</figcaption>
+                    </a>
+                    <button class="addbutton" onclick="addToCart('Kirys', 'https://raw.githubusercontent.com/Rika84/Projekt_gr_2025/main/site2/img/produkt3.jpg', '29,99 zł', this)">
+                        Add to cart <img src="https://raw.githubusercontent.com/Rika84/Projekt_gr_2025/main/site2/img/shopping-basket.png" alt="Koszyk" width="20">
+                    </button>
+                </figure>
+            </div>
+
+            <div class="product">
+                <figure>
+                    <a href="../html/product.html?id=4">
+                        <img class="product_img" src="https://raw.githubusercontent.com/Rika84/Projekt_gr_2025/main/site2/img/produkt4.jpg" alt="Produkt 4">
+                        <figcaption>Hipacitrus - 59,99 zł</figcaption>
+                    </a>
+                    <button class="addbutton" onclick="addToCart('Hipacitrus', 'https://raw.githubusercontent.com/Rika84/Projekt_gr_2025/main/site2/img/produkt4.jpg', '59,99 zł', this)">
+                        Add to cart <img src="https://raw.githubusercontent.com/Rika84/Projekt_gr_2025/main/site2/img/shopping-basket.png" alt="Koszyk" width="20">
+                    </button>
+                </figure>
+            </div>
+
+            <div class="product">
+                <figure>
+                    <a href="../html/product.html?id=5">
+                        <img class="product_img" src="https://raw.githubusercontent.com/Rika84/Projekt_gr_2025/main/site2/img/produkt5.jpg" alt="Produkt 5">
+                        <figcaption>Coralland - 99,99 zł</figcaption>
+                    </a>
+                    <button class="addbutton" onclick="addToCart('Coralland', 'https://raw.githubusercontent.com/Rika84/Projekt_gr_2025/main/site2/img/produkt5.jpg', '99,99 zł', this)">
+                        Add to cart <img src="https://raw.githubusercontent.com/Rika84/Projekt_gr_2025/main/site2/img/shopping-basket.png" alt="Koszyk" width="20">
+                    </button>
+                </figure>
+            </div>
+
+            <div class="product">
+                <figure>
+                    <a href="../html/product.html?id=6">
+                        <img class="product_img" src="https://raw.githubusercontent.com/Rika84/Projekt_gr_2025/main/site2/img/produkt6.jpg" alt="Produkt 6">
+                        <figcaption>Oranda - 39,99 zł</figcaption>
+                    </a>
+                    <button class="addbutton" onclick="addToCart('Oranda', 'https://raw.githubusercontent.com/Rika84/Projekt_gr_2025/main/site2/img/produkt6.jpg', '39,99 zł', this)">
+                        Add to cart <img src="https://raw.githubusercontent.com/Rika84/Projekt_gr_2025/main/site2/img/shopping-basket.png" alt="Koszyk" width="20">
+                    </button>
+                </figure>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+    <div class="social">
+        <p>Follow Us</p>
+        <a href="#"><img src="https://raw.githubusercontent.com/Rika84/Projekt_gr_2025/main/site2/img/snapchat.png" alt="Snapchat"></a>
+        <a href="#"><img src="https://raw.githubusercontent.com/Rika84/Projekt_gr_2025/main/site2/img/google.png" alt="Google+"></a>
+        <a href="#"><img src="https://raw.githubusercontent.com/Rika84/Projekt_gr_2025/main/site2/img/yt.png" alt="YouTube"></a>
+        <a href="#"><img src="https://raw.githubusercontent.com/Rika84/Projekt_gr_2025/main/site2/img/facebook.png" alt="Facebook"></a>
+        <a href="#"><img src="https://raw.githubusercontent.com/Rika84/Projekt_gr_2025/main/site2/img/twitr.png" alt="Twitter"></a>
+    </div>
+    <nav class="menubar">
+        <a href="../html/home.html">Home</a>
+        <a href="../html/news.html">News</a>
+        <a href="../html/about.html">About Us</a>
+        <a href="../html/contact.html">Contact Us</a>
+    </nav>
+    <p class="c">© 2025 Bubbles & Scales</p>
+    </footer>
+
+    <script src="../js/search.js"></script>
+
+    <script>
+        function addToCart(name, image, price, button) {
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
+            let existingItem = cart.find(item => item.name === name);
+            if (existingItem) {
+                existingItem.quantity += 1;
+            } else {
+                cart.push({ name, image, price, quantity: 1 });
+            }
+            localStorage.setItem("cart", JSON.stringify(cart));
+            updateCartCount();
+            if (button) {
+                button.innerHTML = 'Dodano!';
+                button.disabled = true;
+                button.style.backgroundColor = 'gray';
+            }
+        }
+        
+        function updateCartCount() {
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
+            let totalQuantity = cart.reduce((sum, item) => sum + (item.quantity || 1), 0);
+            document.getElementById("cart-count").innerText = totalQuantity;
+        }
+        updateCartCount();
+    </script>
+        
+
+</body>
+</html>
