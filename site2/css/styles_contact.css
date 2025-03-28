@@ -3,10 +3,12 @@
 body {
     font-family: 'Tsukimi Rounded', sans-serif;
     background-image: url(https://raw.githubusercontent.com/Rika84/Projekt_gr_2025/main/site2/img/background_footer.png);
-    background-size: 100%;
+    background-size: 100% 100%;
     margin: 0;
     padding: 0;
     color: black;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 @supports not (font-family: 'Tsukimi Rounded') {
@@ -168,7 +170,7 @@ main {
 }
 
 .menubar{
-    margin: 20px 50px;
+    margin: 30px 50px;
     display: flex;
     justify-content: space-around;
     border-radius: 20px;
